@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<header>
+    <h1>Imitate-Image Generator</h1>
+</header>
+<main>
+    <h2>How To Use</h2>
+    <div>
+        <hr>
+        <h3>Summary</h3>
+        <dl>
+            <dd>the URI only support those pattern</dd>
+            <dt>/{size}</dt>
+            <dt>/{size}?{text}</dt>
+            <dt>/{size}.{type}</dt>
+            <dt>/{size}.{type}?{text}</dt>
+            <dt>/{size}/{color}</dt>
+            <dt>/{size}/{color}?{text}</dt>
+            <dt>/{size}/{color}.{type}?{text}</dt>
+        </dl>
+        <hr>
+        <h3>Imitate-Image {Size}</h3>
+        <dl>
+            <dt>/random</dt>
+            <dt>/random.png</dt>
+            <dt>/random.gif</dt>
+            <dd>generate random color image of random size</dd>
+        </dl>
+        <dl>
+            <dt>/200</dt>
+            <dt>/200.png</dt>
+            <dt>/200.gif</dt>
+            <dd>generate random color image of 200x200</dd>
+        </dl>
+        <dl>
+            <dt>/200x300</dt>
+            <dt>/200x300.png</dt>
+            <dt>/200x300.gif</dt>
+            <dd>generate random color image of 200x300</dd>
+        </dl>
+        <dl>
+            <dt>/random(100)</dt>
+            <dt>/random(100).png</dt>
+            <dt>/random(100).gif</dt>
+            <dd>generate random color image of width and height less than 100px</dd>
+        </dl>
+        <dl>
+            <dt>/random(100,200)</dt>
+            <dt>/random(100,200).png</dt>
+            <dt>/random(100,200).gif</dt>
+            <dd>generate random color image of width and height between 100px and 200px</dd>
+        </dl>
+        <dl>
+            <dt>/random(100,200,300)</dt>
+            <dt>/random(100,200,300).png</dt>
+            <dt>/random(100,200,300).gif</dt>
+            <dd>generate random color image of width between 100px and 200px and height less than 300px</dd>
+        </dl>
+        <dl>
+            <dt>/random(100,200,300,400)</dt>
+            <dt>/random(100,200,300,400).png</dt>
+            <dt>/random(100,200,300,400).gif</dt>
+            <dd>generate random color image of width between 100px and 200px and height between 300px and 400px</dd>
+        </dl>
+        <dl>
+            <dt>/abc</dt>
+            <dt>/xxyy.png</dt>
+            <dt>/zzzd.gif</dt>
+            <dd>generate random color image of 200x200</dd>
+        </dl>
+        <dl>
+            <dt>/abc</dt>
+            <dt>/xxyy.png</dt>
+            <dt>/zzzd.gif</dt>
+            <dd>generate random color image of 200x200</dd>
+        </dl>
+
+        <hr>
+        <h3>Imitate-Image {Color}</h3>
+        <dl>
+            <dt>/{size}/red</dt>
+            <dd>generate image of explicit color name</dd>
+        </dl>
+        <dl>
+            <dt>/{size}/f00</dt>
+            <dt>/{size}/ff00</dt>
+            <dt>/{size}/ff00ff</dt>
+            <dt>/{size}/55ff00ff</dt>
+            <dd>generate image of RGB/ARGB/RRGGBB/AARRGGBB</dd>
+        </dl>
+        <hr>
+        <h3>Imitate-Image {Type}</h3>
+        <dl>
+            <dt>/{size}.png</dt>
+            <dt>/{size}.gif</dt>
+            <dt>/{size}/{color}.png</dt>
+            <dt>/{size}/{color}.gif</dt>
+            <dd>you can always add the suffix on the request URI. only support png and gif.Default is PNG </dd>
+        </dl>
+        <hr>
+        <h3>Imitate-Image {Text}</h3>
+        <dl>
+            <dt>/{size}.png?logo</dt>
+            <dt>/{size}.gif?ad1</dt>
+            <dt>/{size}/{color}.png?ad2</dt>
+            <dt>/{size}/{color}.gif?avatar</dt>
+            <dd>you can always add the queryString at the end of  request URI. </dd>
+        </dl>
+
+        <hr>
+        <h3>Other</h3>
+        <dl>
+            <dt>/</dt>
+            <dd>show this help page</dd>
+        </dl>
+    </div>
+    <h2>
+        Example:
+    </h2>
+    <div>
+        <ul>
+            <li>http:/127.0.0.1:4444/random</li>
+            <li>http:/127.0.0.1:4444/random?item1</li>
+            <li>http:/127.0.0.1:4444/200</li>
+            <li>http:/127.0.0.1:4444/200.png</li>
+            <li>http:/127.0.0.1:4444/200x300</li>
+            <li>http:/127.0.0.1:4444/200x300/red?logo</li>
+            <li>http:/127.0.0.1:4444/random(300)/f00?logo</li>
+            <li>http:/127.0.0.1:4444/random(300,400)/ffff00?logo</li>
+            <li>http:/127.0.0.1:4444/random(300,400,400)/33ffff00?logo</li>
+            <li>http:/127.0.0.1:4444/random(300,400,400,400)/33ffff00.png?logo</li>
+        </ul>
+    </div>
+</main>
+<footer>
+
+</footer>
+</body>
+</html>

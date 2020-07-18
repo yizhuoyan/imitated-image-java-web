@@ -1,0 +1,13 @@
+{
+  "properties": [
+    {
+      "name": "generete.default-color",
+      "type": "java.lang.String",
+      "description": "generete.default-color."
+    },
+    {
+      "name": "generate.default-size",
+      "type": "java.lang.String",
+      "description": "generate.default-size."
+    }
+  ] }
